@@ -34,8 +34,9 @@ def weather(input):
     # convert response object into json
     data  = json.loads(response.text)['Days']
 
+
     for value in data:
-        date.append(['date'])
+        date.append(value['date'])
         min_temp.append(value['temp_min_c'])
         max_temp.append(value['temp_max_c'])
         hum_max.append(value['humid_max_pct'])
@@ -50,7 +51,7 @@ def weather(input):
     # used for show labels on graph
     plt.legend()
 
-    # defining x-axis and y-axis label
+    # defining x-axis and y-axis
     plt.xlabel('date')
     plt.ylabel('temperature in c and humidity')
 
