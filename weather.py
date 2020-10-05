@@ -17,9 +17,14 @@ def weather(input):
     hum_max = list()
     hum_min = list()
 
-    # read config file for api key and id
-    f = open("C:\\Users\\shivi\\Desktop\\weather\\config.txt", "r")
-    data = json.loads(f.read())
+    try:
+        # read config file for api key and id
+        f = open("C:\\Users\\shivi\\Desktop\\weather\\config.txt", "r")
+        data = json.loads(f.read())
+
+    except FileNotFoundError:
+        return 'config.txt do'
+
 
     # read data from file and store them into variables
     app_id = data['app_id']
