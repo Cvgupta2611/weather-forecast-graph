@@ -8,6 +8,7 @@ app = Flask(__name__)
 def weather(input):
     '''
     used for temperature and humidity forecast graph plot using matplotlib
+    asdfghjkl
     '''
 
     # defining lists for storing data
@@ -16,6 +17,8 @@ def weather(input):
     min_temp = list()
     hum_max = list()
     hum_min = list()
+
+
 
     try:
         # read config file for api key and id
