@@ -18,8 +18,6 @@ def weather(input):
     hum_max = list()
     hum_min = list()
 
-
-
     try:
         # read config file for api key and id
         f = open("C:\\Users\\shivi\\Desktop\\weather\\config.txt", "r")
